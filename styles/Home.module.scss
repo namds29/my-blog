@@ -1,0 +1,81 @@
+.container {
+  min-height: 106vh;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Permanent Marker", cursive;
+}
+.parallax_img {
+  position: relative;
+  min-height: 106vh;
+  .background {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    img {
+      width: 100%;
+      height: 106vh;
+    }
+  }
+  .sunshine {
+    position: absolute;
+    left: 60%;
+    top: 13%;
+    z-index: 3;
+    img {
+      width: 30%;
+    }
+  }
+  .birds {
+    position: absolute;
+    left: 10%;
+    top: 2%;
+    z-index: 2;
+  }
+  .welcome_text {
+    position: absolute;
+    top: 30%;
+    z-index: 4;
+    left: 50%;
+  }
+}
+.cave {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  img {
+    width: 100%;
+    height: 100vh;
+  }
+  .title {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+  }
+  .section_button {
+    position: absolute;
+    left: 55%;
+    top: 30%;
+  }
+  .link_btn {
+    background-color: #a64b2a;
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+    border-radius: 15px;
+    color: #ffebc1;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  .climb {
+    position: absolute;
+    width: 40%;
+    left: 0;
+    top: 0;
+  }
+}
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
