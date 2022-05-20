@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import styles from "../styles/Home.module.scss";
@@ -28,20 +29,20 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <div className={styles.parallax_img}>
         <div className={styles.background}>
-          <img src="/background.jpg" alt="" />
+          <Image src="/background.jpg" layout="fill" alt=" " />
         </div>
         <div id="sun" className={styles.sunshine}>
-          <img src="/sun.png" alt="" />
+          <Image src="/sun.png" layout="fill" alt=" " />
         </div>
         <div id="bird" className={styles.birds}>
-          <img src="/bird.png" alt="" />
+          <Image src="/bird.png" layout="fill" alt=" " />
         </div>
         <div id="welcome-text" className={styles.welcome_text}>
-          <h1>Welcome to Nam Doan World's</h1>
+          <h1>Welcome to Nam Doan World&apos;s</h1>
         </div>
       </div>
       <div className={styles.cave}>
-        <img src="/cave.png" alt="" />
+        <Image src="/cave.png" layout="fill" alt=" " />
 
         <div id="section-btn" className={styles.section_button}>
           <div className={styles.title}>What do you find?</div>
@@ -53,7 +54,7 @@ const Home: NextPage = () => {
           </Link>
         </div>
         <div className={styles.climb}>
-          <img src="/climb.png" alt="" />
+          <Image src="/climb.png" layout="fill" alt=" " />
         </div>
       </div>
     </div>
