@@ -12,17 +12,20 @@ const Home: NextPage = () => {
       let welcomeText = document.getElementById("welcome-text");
       let sectionBtn = document.getElementById("section-btn");
       let value = window.scrollY;
-      if (sun) sun.style.top = 13 + value * -0.15 + "%";
+      sun && (sun.style.top = 13 + value * -0.1 + "%");
       if (bird) {
-        bird.style.left = 10 + value * 0.1 + "%";
+        bird.style.left = 10 + value * 0.2 + "%";
         bird.style.top = 2 + value * -0.1 + "%";
       }
       if (welcomeText) {
-        welcomeText.style.left = 50 + value * 0.2 + "%";
-        welcomeText.style.top = 30 + value * -0.2 + "%";
+        welcomeText.style.left = 50 + value * 0.1 + "%";
+        welcomeText.style.top = 30 + value * -0.1 + "%";
       }
-      if (sectionBtn) sectionBtn.style.top = value / 30 + "%";
       console.log(value);
+      if (window.innerWidth <= 750) {
+        sectionBtn && (sectionBtn.style.top = 30 + "%");
+      } else {
+      }
     });
   }, []);
   return (
