@@ -1,11 +1,17 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
+  const [size, setSize] = useState(0);
   useEffect(() => {
+    function resize() {
+      setSize(window.innerWidth);
+    }
+    resize();
+    window.addEventListener("resize", resize);
     window.addEventListener("scroll", () => {
       let sun = document.getElementById("sun");
       let bird = document.getElementById("bird");
@@ -21,18 +27,25 @@ const Home: NextPage = () => {
         welcomeText.style.left = 50 + value * 0.1 + "%";
         welcomeText.style.top = 30 + value * -0.1 + "%";
       }
-      console.log(value);
+      sectionBtn && (sectionBtn.style.top = value / 25 + "%");
       if (window.innerWidth <= 750) {
-        sectionBtn && (sectionBtn.style.top = 30 + "%");
-      } else {
+        sectionBtn && (sectionBtn.style.top = value / 10 + "%");
+        sun && (sun.style.top = 13 + value * 0.06 + "%");
       }
     });
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
   }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.parallax_img}>
         <div className={styles.background}>
-          <Image src="/background.jpg" layout="fill" alt=" " />
+          {size > 750 && <Image src="/background.jpg" layout="fill" alt=" " />}
+          {size <= 750 && (
+            <Image src="/background-1.jpg" layout="fill" alt=" " />
+          )}
         </div>
         <div id="sun" className={styles.sunshine}>
           <Image src="/sun.png" layout="fill" alt=" " />
