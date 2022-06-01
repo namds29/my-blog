@@ -10,9 +10,7 @@ const Home: NextPage = () => {
     function resize() {
       setSize(window.innerWidth);
     }
-    resize();
-    window.addEventListener("resize", resize);
-    window.addEventListener("scroll", () => {
+    function scrollEffect() {
       let sun = document.getElementById("sun");
       let bird = document.getElementById("bird");
       let welcomeText = document.getElementById("welcome-text");
@@ -32,9 +30,13 @@ const Home: NextPage = () => {
         sectionBtn && (sectionBtn.style.top = value / 10 + "%");
         sun && (sun.style.top = 13 + value * 0.06 + "%");
       }
-    });
+    }
+    resize();
+    window.addEventListener("resize", resize);
+    window.addEventListener("scroll", scrollEffect);
     return () => {
       window.removeEventListener("resize", resize);
+      window.removeEventListener("scroll", scrollEffect);
     };
   }, []);
 
@@ -62,8 +64,8 @@ const Home: NextPage = () => {
 
         <div id="section-btn" className={styles.section_button}>
           <div className={styles.title}>What do you find?</div>
-          <Link href="/my-cv">
-            <a className={styles.link_btn}>My CV ?</a>
+          <Link href="/portfolio">
+            <a className={styles.link_btn}>My Portfolio</a>
           </Link>
           <Link href="/my-cv">
             <a className={styles.link_btn}>My Adventure</a>

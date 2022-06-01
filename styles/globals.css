@@ -17,3 +17,6 @@ a {
 html {
   scroll-behavior: smooth;
 }
+.container-fluid{
+  padding: 0;
+}

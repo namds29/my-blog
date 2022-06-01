@@ -13,6 +13,11 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
             rel="stylesheet"
           ></link>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap"
+            rel="stylesheet"
+          ></link>
+          <link href="https://fonts.googleapis.com/css2?family=Port+Lligat+Sans&display=swap" rel="stylesheet"></link>
         </Head>
         <body>
           <Main />
