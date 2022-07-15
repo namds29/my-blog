@@ -62,13 +62,28 @@ export default function MyPortfolio() {
                 to that creativity and provide solutions to those problems that
                 usually surround us.
               </div>
-              <div className={styles.sub_description_1}>
-                Let´s make a something great!
+              <div className={styles.center_div}>
+                <div className={styles.sub_description_1}>
+                  Let´s make a something great!
+                </div>
               </div>
             </Col>
           </Row>
+          <div className={styles.section_skills}>
+            <div className={styles.txt_header}>SKILLS</div>
+            <div className={styles.header}>
+              <div>Design </div>
+              <div
+                className={styles.txt_folio}
+                style={{ paddingLeft: "415px" }}
+              >
+                skills
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div><input type="radio" /></div>
     </Container>
   );
 }

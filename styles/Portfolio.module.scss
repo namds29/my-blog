@@ -82,12 +82,13 @@
 }
 .section_about_me {
   .txt_header {
-    color: #8d8b8b;
-    font-size: 300%;
+    color: rgba(141, 139, 139, 0.27);
+    font-size: 500%;
     text-align: center;
     letter-spacing: 8px;
     font-weight: bold;
     opacity: 0.5;
+    margin-top: 2rem;
   }
   .color_background {
     position: relative;
@@ -124,11 +125,21 @@
       .sub_description_1 {
         background-color: #085eda;
         font-size: 30px;
-        margin-left: 70px;
         padding: 1rem;
-        width: 42rem;
+        width: 30rem;
         border-radius: 7px;
       }
+    }
+  }
+  .section_skills {
+    color: white;
+    height: 30vh;
+    .header {
+      text-align: center;
+      line-height: 55px;
+      font-size: 90px;
+      font-weight: bold;
+      margin-top: 3rem;
     }
   }
 }
@@ -137,6 +148,10 @@
   text-shadow: 2px 0 0 #5199ff, -2px 0 0 #5199ff, 0 2px 0 #5199ff,
     0 -2px 0 #5199ff, 1px 1px #5199ff, -1px -1px 0 #5199ff, 1px -1px 0 #5199ff,
     -1px 1px 0 #5199ff;
+}
+.center_div {
+  display: flex;
+  justify-content: center;
 }
 @media only screen and (max-width: 900px) {
   .background_intro {
