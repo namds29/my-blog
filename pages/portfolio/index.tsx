@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Col, Container, Row } from "react-bootstrap";
-import { Header } from "../../components/header";
 import styles from "../../styles/Portfolio.module.scss";
 
 export default function MyPortfolio() {
+  const classTxtFolio = styles.txt_folio + ' ' + styles.skills;
+  const txtProgrammingSkill = styles.txt_folio + ' ' + styles.txt_progr;
   return (
     <Container fluid className={styles.container}>
-      <Header />
       <div className={styles.introduce}>
         <div className={styles.background_intro}>
           <Image src="/moutain1.png" layout="fill" />
@@ -62,11 +62,63 @@ export default function MyPortfolio() {
                 to that creativity and provide solutions to those problems that
                 usually surround us.
               </div>
-              <div className={styles.sub_description_1}>
-                Let´s make a something great!
+              <div className={styles.center_div}>
+                <div className={styles.sub_description_1}>
+                  Let´s make a something great!
+                </div>
               </div>
             </Col>
           </Row>
+          <div className={styles.section_skills}>
+            <div className={styles.txt_header}>SKILLS</div>
+            <div className={styles.header}>
+              <div>Design </div>
+              <div className={classTxtFolio}>
+                skills
+              </div>
+              <div className={styles.row_logo}>
+                <div className={styles.skill_logo}>
+                  <Image src="/pts.svg" layout="fill" alt="icon git" />
+                </div>
+                <div className={styles.skill_logo}>
+                  <Image src="/figma.svg" layout="fill" alt="icon git" />
+                </div>
+                <div className={styles.skill_logo}>
+                  <Image src="/Lightroom.svg" layout="fill" alt="icon git" />
+                </div>
+              </div>
+            </div>
+            <div className={styles.header}>
+              <div>Programming </div>
+              <div className={txtProgrammingSkill}>
+                skills
+              </div>
+              <div className={styles.row_logo}>
+                <div className={styles.skill_nodejs}>
+                  <Image src="/nodejs.svg" layout="fill" alt="icon git" />
+                </div>
+                <div className={styles.skill_logo}>
+                  <Image src="/ic-angular.svg" layout="fill" alt="icon git" />
+                </div>
+                <div className={styles.skill_logo}>
+                  <Image src="/ic-react.svg" layout="fill" alt="icon git" />
+                </div>
+                <div className={styles.skill_logo}>
+                  <Image src="/ic-html.svg" layout="fill" alt="icon git" />
+                </div>
+                <div className={styles.skill_logo}>
+                  <Image src="/ic-css.svg" layout="fill" alt="icon git" />
+                </div>
+                <div className={styles.skill_logo}>
+                  <Image src="/ic-js.svg" layout="fill" alt="icon git" />
+                </div>
+                <div className={styles.skill_logo}>
+                  <Image src="/ic-bs.svg" layout="fill" alt="icon git" />
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </Container>
