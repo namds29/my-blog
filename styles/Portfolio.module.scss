@@ -53,7 +53,6 @@
 
   .img_intro {
     position: relative;
-    height: 300px;
   }
 
   .rightside {
@@ -75,6 +74,7 @@
 
 .row_icon {
   display: flex;
+  align-items: flex-start;
 
   .icon {
     position: relative;
@@ -151,6 +151,7 @@
 
   .section_skills {
     color: white;
+
     .header {
       text-align: center;
       line-height: 55px;
@@ -163,22 +164,26 @@
       padding-left: 350px;
       padding-bottom: 50px;
     }
-    .txt_progr{
+
+    .txt_progr {
       padding-left: 550px;
     }
-    .row_logo{
+
+    .row_logo {
       display: flex;
       justify-content: center;
       padding-bottom: 80px;
       flex-wrap: wrap;
       gap: 50px;
-      .skill_logo{
+
+      .skill_logo {
         position: relative;
         width: 60px;
         height: 60px;
-      
+
       }
-      .skill_nodejs{
+
+      .skill_nodejs {
         position: relative;
         width: 60px;
         height: 60px;
@@ -195,10 +200,12 @@
     0 -2px 0 #5199ff, 1px 1px #5199ff, -1px -1px 0 #5199ff, 1px -1px 0 #5199ff,
     -1px 1px 0 #5199ff;
 }
+
 .center_div {
   display: flex;
   justify-content: center;
 }
+
 @media only screen and (max-width: 900px) {
   .background_intro {
     height: 32rem;
@@ -308,11 +315,13 @@
       height: 18px;
     }
   }
-.section_about_me{
-  .txt_header{
-    font-size: 200%;
+
+  .section_about_me {
+    .txt_header {
+      font-size: 200%;
+    }
   }
-}
+
   .section_skills {
     color: white;
 
@@ -327,11 +336,31 @@
     .txt_folio {
       padding-left: 115px !important;
     }
-    .skills{
+
+    .skills {
       padding-top: 55px;
     }
-    .txt_progr{
+
+    .txt_progr {
       padding-top: 50px;
+    }
+  }
+}
+
+.rounded {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  background-color: purple;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 5px;
+  &:hover{
+    cursor: pointer;
+    a{
+      color: white;
     }
   }
 }

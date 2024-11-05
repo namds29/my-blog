@@ -9,7 +9,7 @@ export default function MyPortfolio() {
     <Container fluid className={styles.container}>
       <div className={styles.introduce}>
         <div className={styles.background_intro}>
-          <Image src="/moutain1.png" layout="fill" />
+          <Image src="/moutain1.png" layout="fill" alt="mountain" />
           <div className={styles.darker}></div>
           <div className={styles.inner_content}>
             <div className={styles.text_intro}>
@@ -19,7 +19,7 @@ export default function MyPortfolio() {
             <div className={styles.intro_content}>
               <Row className={styles.intro_detail}>
                 <Col xs={5} className={styles.img_intro}>
-                  <Image src="/img-intro.png" layout="fill" alt="img intro" />
+                  <img style={{objectFit: 'contain', width: '100%'}} src="/img-intro.png" alt="img intro" />
                 </Col>
                 <Col xs={7} className={styles.rightside}>
                   <div>Hi!</div>
@@ -37,6 +37,7 @@ export default function MyPortfolio() {
                     <div className={styles.icon}>
                       <Image src="/ic-fb.svg" layout="fill" alt="icon fb" />
                     </div>
+                    <div className={styles.rounded}> <a href="https://drive.google.com/file/d/1RuLuac5PSKbWBEZ-hp-KPmwKGZvqcVSn/view" target="_blank" rel="noreferrer">CV</a></div>
                   </div>
                 </Col>
               </Row>
