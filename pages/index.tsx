@@ -67,9 +67,6 @@ const Home: NextPage = () => {
           <Link href="/portfolio">
             <a className={styles.link_btn}>My Portfolio</a>
           </Link>
-          <Link href="/my-cv">
-            <a className={styles.link_btn}>My Adventure</a>
-          </Link>
         </div>
         <div className={styles.climb}>
           <Image src="/climb.png" layout="fill" alt=" " />
