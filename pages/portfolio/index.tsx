@@ -37,7 +37,7 @@ export default function MyPortfolio() {
                     <div className={styles.icon}>
                       <Image src="/ic-fb.svg" layout="fill" alt="icon fb" />
                     </div>
-                    <div className={styles.rounded}> <a href="https://drive.google.com/file/d/1RuLuac5PSKbWBEZ-hp-KPmwKGZvqcVSn/view" target="_blank" rel="noreferrer">CV</a></div>
+                    <div className={styles.rounded}> <a href="https://drive.google.com/file/d/1Cf7v0rldRRgIsebmbpHcL9mjOVukkHY0/view?usp=sharing" target="_blank" rel="noreferrer">CV</a></div>
                   </div>
                 </Col>
               </Row>
